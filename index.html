@@ -1,0 +1,134 @@
+<!DOCTYPE>
+<html>
+<meta charset="utf-8"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Example</title>
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+
+<!-- Dependencies -->
+<div class="quiz-container-outer">
+    <div class="quiz-container-inner">
+
+        <div class="quiz-title">
+            <div class="quiz-main-title">
+                Quiz of the week's news
+            </div>
+            <div class="quiz-sub-title">
+                It's the weekly news quiz - have you been playing attention to what's has been going on in the world
+                over the past seven days?
+            </div>
+        </div>
+
+        <div class="slick-part">
+            <div class="slick-item">
+                <div class="quiz-image">
+                    <img src="asset/t2.jpg">
+                </div>
+                <div class="quiz-question">
+                    <div class="quiz-question-num-container">
+                        <div class="quiz-question-num">1</div>
+                    </div>
+                    <div class="quiz-question-text">
+                        All of whose life has become the most visited exhibition in the history of the V&A museum
+                    </div>
+                    <div class="quiz-question-options">
+                        <ul id="question_1">
+                            <li>
+                                <input type="radio" name="question_1" id="question_1_1">
+                                David Bowie
+                            </li>
+                            <li>
+                                <input type="radio" name="question_1" id="question_1_2">
+                                Yves St Laurent
+                            </li>
+                            <li>
+                                <input type="radio" name="question_1" id="question_1_3">
+                                Diana, Princess of Wales
+                            </li>
+                            <li>
+                                <input type="radio" name="question_1" id="question_1_4">
+                                To keep the product affordable
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slick-item">
+                <div class="quiz-image">
+                    <img src="asset/t2.jpg">
+                </div>
+                <div class="quiz-question">
+                    <div class="quiz-question-num-container">
+                        <div class="quiz-question-num">2</div>
+                    </div>
+                    <div class="quiz-question-text">
+                        All of whose life has become the most visited exhibition in the history of the V&A museum
+                    </div>
+                    <div class="quiz-question-options">
+                        <ul id="question_2">
+                            <li>
+                                <input type="radio" name="question_1" id="question_2_1">
+                                David Bowie
+                            </li>
+                            <li>
+                                <input type="radio" name="question_1" id="question_2_2">
+                                Yves St Laurent
+                            </li>
+                            <li>
+                                <input type="radio" name="question_1" id="question_2_3">
+                                Diana, Princess of Wales
+                            </li>
+                            <li>
+                                <input type="radio" name="question_1" id="question_2_4">
+                                To keep the product affordable
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--slick-part结束-->
+
+        <div class="quiz-result">
+            <div class="quiz-result-title">Right!</div>
+            <div class="quiz-result-text">
+                More than 1.5 million people have now visited the show, David Bowie ls, in eight venues around the world. About 312,000 of them saw the exhibition when it opened in London in 2013. The show is finishing its run in Bologna and moves on to Tokyo early next year.
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="vendor/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="vendor/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    $(document).ready(function () {
+        $('.slick-part').css('visibility','visible')
+        $('.slick-part').slick({
+            dots: true,
+            infinite: false
+        });
+
+        $('.quiz-question-options ul li').click(function (e) {
+
+            var question_num = e.target.childNodes[1] ? e.target.childNodes[1] : e.target;
+
+            console.log(question_num);
+            console.log(question_num.attributes);
+        })
+
+    });
+</script>
+
+
+</body>
+
+</html>
