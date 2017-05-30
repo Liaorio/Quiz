@@ -37,7 +37,7 @@ body {
 }
 
 .slick-part {
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
 
 /*slick slide height eliminate*/
@@ -107,4 +107,9 @@ body {
 .quiz-result-text {
     color: #4C4C4C;
     font-weight: 200;
+}
+
+
+.hide {
+    display: none;
 }
