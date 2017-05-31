@@ -1,181 +1,124 @@
 {
   "questions": [
+
     {
-      "feedback": [
-        "WRONG. A member of the religious police tried to break up the festival but he was stopped by the National Guard and removed from the scene. Men and women are usually allowed to mix during an annual government-sponsored festival, as long as they comply with the conservative dress code.",
-        "CORRECT. That's what happened. But the officer was stopped by the National Guard and removed from the scene. Men and women are usually allowed to mix during an annual government-sponsored festival, as long as they comply with the conservative dress code.",
-        "WRONG. A member of the religious police tried to break up the festival but he was stopped by the National Guard and removed from the scene. Men and women are usually allowed to mix during an annual government-sponsored festival, as long as they comply with the conservative dress code.",
-        "WRONG. A member of the religious police tried to break up the festival but he was stopped by the National Guard and removed from the scene. Men and women are usually allowed to mix during an annual government-sponsored festival, as long as they comply with the conservative dress code."
+      "result" : [
+        "Wrong!","Correct!","Wrong!","Wrong"
       ],
-      "options": {
-        "A member of the religious police tells the women to go home": "0",
-        "A member of the religious police tries to break up the festival": "1",
-        "The religious police try to separate the men from the women": "0",
-        "They police join the party": "0"
-      },
-      "optionsKeys": [
+      "feedback": [
+        "A member of the religious police tried to break up the festival but he was stopped by the National Guard and removed from the scene. Men and women are usually allowed to mix during an annual government-sponsored festival, as long as they comply with the conservative dress code.",
+        "That's what happened. But the officer was stopped by the National Guard and removed from the scene. Men and women are usually allowed to mix during an annual government-sponsored festival, as long as they comply with the conservative dress code.",
+        "A member of the religious police tried to break up the festival but he was stopped by the National Guard and removed from the scene. Men and women are usually allowed to mix during an annual government-sponsored festival, as long as they comply with the conservative dress code.",
+        "A member of the religious police tried to break up the festival but he was stopped by the National Guard and removed from the scene. Men and women are usually allowed to mix during an annual government-sponsored festival, as long as they comply with the conservative dress code."
+      ],
+      "score": [
+         0, 1, 0, 0
+      ],
+      "options": [
         "The religious police try to separate the men from the women",
         "A member of the religious police tries to break up the festival",
         "A member of the religious police tells the women to go home",
         "They police join the party"
       ],
       "question": "The religious police arrive at a government-sponsored cultural festival in Riyadh attended by both men and women. Can you guess what happens?",
-      "questionImg": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q1_d8iud.PNG",
-      "questionVideo": "p03l1410"
+      "questionImg": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q1_d8iud.PNG"
     },
+
+
     {
-      "feedback": [
-        "WRONG. The legal boundaries in this case are blurred. But shopkeepers usually do comply as the religious police is a state institution which reports to the authorities. Police also have jurisdiction over public spaces.",
-        "WRONG. The legal boundaries in this case are blurred. But shopkeepers usually do comply as the religious police is a state institution which reports to the authorities. Police also have jurisdiction over public spaces.",
-        "CORRECT. Even though the legal boundaries in this matter are blurred, shopkeepers usually comply as the religious police is a state institution which reports to the authorities. They also have jurisdiction over public spaces.",
-        "WRONG. The legal boundaries in this case are blurred. But shopkeepers usually do comply as the religious police is a state institution which reports to the authorities. Police also have jurisdiction over public spaces."
+      "result" : [
+        "Wrong!","Wrong!","Correct","Wrong!"
       ],
-      "options": {
-        "He asks the religious police to leave the shop": "0",
-        "He asks the religious police to serve her instead": "0",
-        "He doesn't serve the woman": "1",
-        "He serves her - the religious police can’t stop him": "0"
-      },
-      "optionsKeys": [
+      "feedback": [
+        "The legal boundaries in this case are blurred. But shopkeepers usually do comply as the religious police is a state institution which reports to the authorities. Police also have jurisdiction over public spaces.",
+        "The legal boundaries in this case are blurred. But shopkeepers usually do comply as the religious police is a state institution which reports to the authorities. Police also have jurisdiction over public spaces.",
+        "Even though the legal boundaries in this matter are blurred, shopkeepers usually comply as the religious police is a state institution which reports to the authorities. They also have jurisdiction over public spaces.",
+        "The legal boundaries in this case are blurred. But shopkeepers usually do comply as the religious police is a state institution which reports to the authorities. Police also have jurisdiction over public spaces."
+      ],
+      "score": [
+        0, 0, 1, 0
+      ],
+      "options": [
         "He serves her - the religious police can’t stop him",
         "He asks the religious police to leave the shop",
         "He doesn't serve the woman",
         "He asks the religious police to serve her instead"
       ],
-      "question": "<p>Members of the religious police ask a salesperson in a shop not to serve a woman because she is deemed to be dressed inappropriately. Can you guess what happens?</p>",
-      "questionImg": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q2_25ytt.PNG",
-      "questionVideo": "p03l142t"
+      "question": "Members of the religious police ask a salesperson in a shop not to serve a woman because she is deemed to be dressed inappropriately. Can you guess what happens?",
+      "questionImg": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q2_25ytt.PNG"
     },
+
+
     {
-      "feedback": [
-        "WRONG. The woman confronts the member of the religious police and films the whole incident. The religious police don't have blanket powers to arrest anyone, and to carry out an arrest they would usually be accompanied by ordinary police.",
-        "WRONG. The woman confronts the member of the religious police and films the whole incident. The religious police don't have blanket powers to arrest anyone, and to carry out an arrest they would usually be accompanied by ordinary police.",
-        "CORRECT. The religious police don't have blanket arrest powers. Usually they are accompanied by ordinary police when making arrests, and their authority has been further reduced since 2013, when they were stripped of their ability to interrogate or charge people.",
-        "WRONG. The woman confronts the member of the religious police and films the whole incident. The religious police don't have blanket powers to arrest anyone, and to carry out an arrest they would usually be accompanied by ordinary police."
+      "result" : [
+        "Wrong!","Wrong!","Correct","Wrong!"
       ],
-      "options": {
-        "She agrees to leave the centre after they threaten to arrest her": "0",
-        "The religious police arrest her": "0",
-        "The woman confronts the police and refuses to leave the centre": "1",
-        "The woman offers to remove the nail polish": "0"
-      },
-      "optionsKeys": [
+      "feedback": [
+        "The woman confronts the member of the religious police and films the whole incident. The religious police don't have blanket powers to arrest anyone, and to carry out an arrest they would usually be accompanied by ordinary police.",
+        "The woman confronts the member of the religious police and films the whole incident. The religious police don't have blanket powers to arrest anyone, and to carry out an arrest they would usually be accompanied by ordinary police.",
+        "The religious police don't have blanket arrest powers. Usually they are accompanied by ordinary police when making arrests, and their authority has been further reduced since 2013, when they were stripped of their ability to interrogate or charge people.",
+        "The woman confronts the member of the religious police and films the whole incident. The religious police don't have blanket powers to arrest anyone, and to carry out an arrest they would usually be accompanied by ordinary police."
+      ],
+      "score": [
+        0, 0, 1, 0
+      ],
+      "options": [
         "She agrees to leave the centre after they threaten to arrest her",
         "The religious police arrest her",
         "The woman confronts the police and refuses to leave the centre",
         "The woman offers to remove the nail polish"
       ],
-      "question": "<p>A member of the religious police asks a woman to leave a shopping centre because she&rsquo;s wearing nail polish. Can you guess what happens next?</p>",
-      "questionImg": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q3_7wki2.PNG",
-      "questionVideo": "p03l1472"
+      "question": "A member of the religious police asks a woman to leave a shopping centre because she&rsquo;s wearing nail polish. Can you guess what happens next?",
+      "questionImg": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q3_7wki2.PNG"
     },
+
+
     {
-      "feedback": [
-        "WRONG. The religious police believe that music, as well as the mixing of men and women, is unlawful. But they have been prohibited from conducting car chases since a Saudi was killed and his wife and children injured after a pursuit.",
-        "CORRECT. The religious police believe that music, as well as the mixing of men and women, is unlawful. But they have been prohibited from conducting car chases since a Saudi was killed and his wife and children injured after a pursuit.",
-        "WRONG. They ask everyone to go back to their cars. The religious police believe that music, as well as the mixing of men and women, is unlawful.",
-        "WRONG. The religious police believe that music, as well as the mixing of men and women, is unlawful. They ask people to go back to their cars."
+      "result" : [
+        "Wrong!","Correct","Wrong!","Wrong!"
       ],
-      "options": {
-        "The party rush to their cars and are chased by the religious police": "0",
-        "The police ask to join the party": "0",
-        "The religious police ask the people to go back to their cars": "1",
-        "The religous police leave the men alone but order the women to go back to their cars": "0"
-      },
-      "optionsKeys": [
+      "feedback": [
+        "The religious police believe that music, as well as the mixing of men and women, is unlawful. But they have been prohibited from conducting car chases since a Saudi was killed and his wife and children injured after a pursuit.",
+        "The religious police believe that music, as well as the mixing of men and women, is unlawful. But they have been prohibited from conducting car chases since a Saudi was killed and his wife and children injured after a pursuit.",
+        "They ask everyone to go back to their cars. The religious police believe that music, as well as the mixing of men and women, is unlawful.",
+        "The religious police believe that music, as well as the mixing of men and women, is unlawful. They ask people to go back to their cars."
+      ],
+      "score": [
+        0, 0, 1, 0
+      ],
+      "options": [
         "The party rush to their cars and are chased by the religious police",
         "The religious police ask the people to go back to their cars",
         "The religous police leave the men alone but order the women to go back to their cars",
         "The police ask to join the party"
       ],
       "question": "<p>The religious police arrive at the wedding party of an Egyptian couple celebrating in the street. Can you guess what happens next?</p>",
-      "questionImg": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q4_tjwri.PNG",
-      "questionVideo": "p03l14bf"
+      "questionImg": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q4_tjwri.PNG"
     },
+
     {
-      "feedback": [
-        "CORRECT. The religious police do not approve of the mixing of men and women who are not related, even when it happens in public.The celebrity involved in this case did not reveal details of the interrogation or what happened in the mall control room.",
-        "WRONG. They grabbed him and took him to the centre control room for interrogation. The religious police do not approve of the mixing of men and women who are not related, even in public.",
-        "WRONG. They grabbed him and took him to the centre control room for interrogation. The religious police do not approve of the mixing of men and women who are not related, even when it happens in public.",
-        "WRONG. They grabbed him and took him to the shopping centre control room for interrogation. The religious police do not approve of the mixing of men and women who are not related, even when it happens in public."
+      "result" : [
+        "Correct","Wrong!","Wrong!","Wrong!"
       ],
-      "options": {
-        "The police beat him up": "0",
-        "The religious police ask for his autograph": "0",
-        "The religious police grab him and take him to the centre control room for interrogation": "1",
-        "They run to take selfies with him": "0"
-      },
-      "optionsKeys": [
+      "feedback": [
+        "The religious police do not approve of the mixing of men and women who are not related, even when it happens in public.The celebrity involved in this case did not reveal details of the interrogation or what happened in the mall control room.",
+        "They grabbed him and took him to the centre control room for interrogation. The religious police do not approve of the mixing of men and women who are not related, even in public.",
+        "They grabbed him and took him to the centre control room for interrogation. The religious police do not approve of the mixing of men and women who are not related, even when it happens in public.",
+        "They grabbed him and took him to the shopping centre control room for interrogation. The religious police do not approve of the mixing of men and women who are not related, even when it happens in public."
+      ],
+      "score": [
+        0, 0, 1, 0
+
+      ],
+      "options": [
         "The religious police grab him and take him to the centre control room for interrogation",
         "They run to take selfies with him",
         "The religious police ask for his autograph",
         "The police beat him up"
       ],
       "question": "<p>A Kuwaiti actor arrives at a shopping centre in Riyadh and a large group of female fans gather around him. Can you guess what happens next?</p>",
-      "questionImg": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q5_mhnmg.PNG",
-      "questionVideo": "p03l14lc"
-    },
-    {
-      "feedback": [
-        "WRONG. Even though there have been cases in the past when female victims have been prosecuted in cases of rape or harassment, in this case, that's not what happened. The religious police called the shopping centre security and arrested the man.",
-        "WRONG. The religious police do not usually ignore phone calls. What actually happened was they called the shopping centre security and arrested the man.",
-        "WRONG. What actually happened was they called shopping centre security and arrested the man.",
-        "CORRECT. Protecting a woman in this situation is one of their duties, even though women may be reluctant to report incidents for fear of repercussions if any blame is placed on them."
-      ],
-      "options": {
-        "The religious police interrogate her and summon her guardian": "0",
-        "They call shopping centre security, prevent the man from running away and arrest him": "1",
-        "They close down the shopping centre": "0",
-        "They ignore the phone call": "0"
-      },
-      "optionsKeys": [
-        "The religious police interrogate her and summon her guardian",
-        "They ignore the phone call",
-        "They close down the shopping centre",
-        "They call shopping centre security, prevent the man from running away and arrest him"
-      ],
-      "question": "<p>A man allegedly tries to blackmail a women at gunpoint at a shopping centre. She phones the religious police for help. Can you guess what happens?</p>",
-      "questionImg": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/Capture_b322n.PNG",
-      "questionVideo": "p03l19sk"
+      "questionImg": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q5_mhnmg.PNG"
     }
-  ],
-  "feedback": [
-    {
-      "maxScore": "0",
-      "overview": "Too bad...",
-      "summary": "You might want to read more about Saudi Arabia in our special series 'Saudis on Social'"
-    },
-    {
-      "maxScore": "1",
-      "overview": "Too bad",
-      "summary": "You might want to read more about Saudi Arabia in our special series 'Saudis on Social'"
-    },
-    {
-      "maxScore": "2",
-      "overview": "Too bad",
-      "summary": "You might want to brush up on your knowledge of the police - try our special series 'Saudis on Social'"
-    },
-    {
-      "maxScore": "3",
-      "overview": "Not bad!",
-      "summary": "Not too bad but it seems like you might need to learn a bit more - try our special series 'Saudis on Social'"
-    },
-    {
-      "maxScore": "4",
-      "overview": "Not bad!",
-      "summary": "You seem to know a few things about the religious police"
-    },
-    {
-      "maxScore": "5",
-      "overview": "Well done!",
-      "summary": "You know a lot about how the religious police operate"
-    },
-    {
-      "maxScore": "6",
-      "overview": "Great!",
-      "summary": "You appear to be an expert on the Saudi religious police"
-    }
-  ],
-  "hideScore": false,
-  "useRunningScore": true
+
+  ]
 }

@@ -73,6 +73,7 @@ body {
 .quiz-question-text {
     font-size: 18px;
     font-weight: 500;
+    padding-left: 45px;
 }
 
 .quiz-question-options {
@@ -95,6 +96,7 @@ body {
 
 .quiz-result {
     margin: 30px 20px 0 20px;
+    min-height: 200px;
 }
 
 .quiz-result-title {

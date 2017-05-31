@@ -28,35 +28,26 @@
 
         </div>
 
-
         <div class="quiz-result">
-            <div id="result_question_1">
-                <div class="quiz-result-title">Right!</div>
-                <div class="quiz-result-text">
-                    More than 1.5 million people have now visited the show, David Bowie ls, in eight venues around the world. About 312,000 of them saw the exhibition when it opened in London in 2013. The show is finishing its run in Bologna and moves on to Tokyo early next year.
-                </div>
-            </div>
-            <div id="result_question_2">
-                <div class="quiz-result-title">Wrong!</div>
-                <div class="quiz-result-text">
-                    More than 1.5 million people have now visited the show, David Bowie ls, in eight venues around the world. About 312,000 of them saw the exhibition when it opened in London in 2013. The show is finishing its run in Bologna and moves on to Tokyo early next year.
-                </div>
-            </div>
+
         </div>
     </div>
 </div>
 
 
-<script src="vendor/jquery-3.2.1.min.js" type="text/javascript"></script>
-<script src="vendor/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script src="vendor/jquery-3.2.1.min.js"></script>
+<script src="vendor/jquery.lazyload.js"></script>
+<script src="vendor/slick/slick.js" charset="utf-8"></script>
 <script>
-    $.getJSON("./example.json",function(data){
-        let questions = data.questions;
+    $.getJSON("./example.json",function(data) {
+        var questions = data.questions;
+
         $.each(questions, function(key, val) {
+
             $('.slick-part').append(
                 "<div class='slick-item'>" +
                     "<div class='quiz-image'>" +
-                        "<img src='asset/t2.jpg'>" +
+                        "<img class='lazy' data-original='./asset/t"+ key +".jpg' width='100%' height='200px'>" +
                     "</div>" +
                     "<div class='quiz-question'>" +
                         "<div class='quiz-question-num-container'>" +
@@ -66,48 +57,53 @@
                             val.question +
                         "</div>" +
                         "<div class='quiz-question-options'>" +
-                            "<ul id='`question_${key}`'>" +
-                                "<li id='`question_${key}_1_li'>" +
-                                    "<input type='radio' name='`question_${key}`' id='`question_${key}_1_option'>" +  val.optionsKeys[0] +
+                            "<ul id='question_" + key + "'>" +
+                                "<li id='question_"+ key +"_1_li'>" +
+                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_1_option'>" +   val.options[0] +
                                 "</li>" +
-                                "<li id='`question_${key}_2_li'>" +
-                                    "<input type='radio' name='`question_${key}`' id='`question_${key}_2_option'>" +  val.optionsKeys[1] +
+                                "<li id='question_" + key + "_2_li'>" +
+                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_2_option'>" +   val.options[1] +
                                 "</li>" +
-                                "<li id='`question_${key}_3_li'>" +
-                                    "<input type='radio' name='`question_${key}`' id='`question_${key}_3_option'>" +  val.optionsKeys[2] +
+                                "<li id='question_" + key + "_3_li'>" +
+                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_3_option'>" +   val.options[2] +
                                 "</li>" +
-                                "<li id='`question_${key}_4_li'>" +
-                                    "<input type='radio' name='`question_${key}`' id='`question_${key}_4_option'>" +  val.optionsKeys[3] +
+                                "<li id='question_" + key + "_4_li'>" +
+                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_4_option'>" +   val.options[3] +
                                 "</li>" +
                             "</ul>" +
                         "</div>" +
                     "</div>" +
                 "</div>"
+            );
+
+            $(".quiz-result").append(
+                "<div id='result_question_" + key + "'>" + "</div>"
             )
+
         });
     });
 </script>
 <script>
     $(document).ready(function () {
+
         $('.slick-part').slick({
             dots: true,
             infinite: false,
-            asNavFor: '.quiz-result'
+            asNavFor: '.quiz-result',
         });
 
         $('.quiz-result').slick({
             asNavFor:'.slick-part',
             fade: true,
-            arrow: false
+            arrows: false,
         });
+
+        $("img.lazy").lazyload();
 
         $('.quiz-question-options ul li').click(function (e) {
 
             //input选中
-            let option_input = e.target.childNodes[1] ? e.target.childNodes[1] : e.target;
-
-            console.log(e.target);
-
+            let option_input = e.target.childNodes[0] ? e.target.childNodes[0] : e.target;
             let option_input_id = option_input.getAttribute("id");
             $('#' + option_input_id).attr('checked',true);
 
@@ -122,10 +118,19 @@
             $("#" + question_id).css('color','#efefef');
 
             //答案显示
+            let question_answered = option_input_id.split('_')[1];
+            let option_choose = option_input_id.split('_')[2];
+            $.getJSON("./example.json",function(data) {
+                let question = data.questions[question_answered];
+                let result = question.result[option_choose-1];
+                let feedback = question.feedback[option_choose-1];
 
-
+                $('#result_question_' + question_answered ).append(
+                    "<div class='quiz-result-title'>" + result + "</div>" +
+                    "<div class='quiz-result-text'>" +  feedback + "</div>"
+                )
+            })
         })
-
     })
 </script>
 
