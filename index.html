@@ -22,6 +22,7 @@
                 It's the weekly news quiz - have you been playing attention to what's has been going on in the world
                 over the past seven days?
             </div>
+
         </div>
 
         <div class="slick-part">
@@ -36,8 +37,8 @@
 
 
 <script src="vendor/jquery-3.2.1.min.js"></script>
-<script src="vendor/jquery.lazyload.js"></script>
 <script src="vendor/slick/slick.js" charset="utf-8"></script>
+<script src="vendor/jquery.lazyload.js"></script>
 <script>
 
     $.getJSON("./example.json",function(data) {
@@ -77,6 +78,7 @@
                             "</ul>" +
                         "</div>" +
                     "</div>" +
+                    "<div class='nextButton' id='next_"+ key +"'>" + "Next" + "</div>" +
                 "</div>"
             );
 
@@ -116,9 +118,11 @@
         $("img.lazy").lazyload();
 
         $('.slick-part').slick({
-            dots: true,
+            dots: false,
+            draggable: false,
             infinite: false,
             asNavFor: '.quiz-result',
+            nextArrow: $('.nextButton'),
         });
 
         $('.quiz-result').slick({
@@ -163,6 +167,9 @@
 
                 score = score + question.score[option_choose-1];
             })
+
+            //nextButton显示
+            $("#next_" + question_answered).css('visibility','visible');
 
             //分数显示
             $(".score").html(score);

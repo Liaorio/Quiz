@@ -1,5 +1,6 @@
 * {
     font-size: 16px;
+    outline: none;
 }
 
 body {
@@ -82,6 +83,7 @@ body {
 
 .quiz-question-options ul {
     list-style: none;
+    min-height: 200px;
 }
 
 .quiz-question-options ul li {
@@ -92,6 +94,18 @@ body {
 
 .quiz-question-options ul li:hover {
     background: #B4A24E;
+}
+
+.nextButton {
+    margin-right: 20px;
+    float: right;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    background: #B4A24E;
+    color: #fff;
+    text-align: center;
+    visibility: hidden;
 }
 
 .quiz-result {
