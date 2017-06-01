@@ -111,7 +111,25 @@ body {
     font-weight: 200;
 }
 
-
 .hide {
     display: none;
 }
+
+.score-div {
+    text-align: center;
+}
+
+.score-part {
+    line-height: 200px;
+    height: 200px;
+    background-color: white;
+    margin: 20px 30px;
+    font-size: 40px;
+    color: #B4A24E;
+}
+
+.score {
+    font-size: 40px;
+}
+
+

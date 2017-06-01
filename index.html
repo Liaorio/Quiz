@@ -39,11 +39,15 @@
 <script src="vendor/jquery.lazyload.js"></script>
 <script src="vendor/slick/slick.js" charset="utf-8"></script>
 <script>
+
     $.getJSON("./example.json",function(data) {
+
         var questions = data.questions;
+        var number = questions.length;
 
         $.each(questions, function(key, val) {
 
+            //题目页面
             $('.slick-part').append(
                 "<div class='slick-item'>" +
                     "<div class='quiz-image'>" +
@@ -76,15 +80,40 @@
                 "</div>"
             );
 
+            //题目答案页面
             $(".quiz-result").append(
                 "<div id='result_question_" + key + "'>" + "</div>"
-            )
+            );
 
         });
+
+        //结果页面
+        $('.slick-part').append(
+            "<div class='slick-item'>" +
+                "<div class='score-div'>" +
+                    "<h1>" + "Your Score" +
+                        "<div class='score-part'>" +
+                            "<span class='score'>" + 0 + "</span>" + "&nbsp;&nbsp;of&nbsp;&nbsp;" + number +
+                        "</div>" +
+                        "Share the result" +
+                    "</h1>" +
+                "</div>" +
+            "</div>"
+        );
+
+        $(".quiz-result").append(
+            "<div id='result_question_last'>" + "</div>"
+        );
+
+
     });
-</script>
-<script>
+
+
     $(document).ready(function () {
+
+        var score = 0;
+
+        $("img.lazy").lazyload();
 
         $('.slick-part').slick({
             dots: true,
@@ -94,11 +123,10 @@
 
         $('.quiz-result').slick({
             asNavFor:'.slick-part',
+            infinite: false,
             fade: true,
             arrows: false,
         });
-
-        $("img.lazy").lazyload();
 
         $('.quiz-question-options ul li').click(function (e) {
 
@@ -120,6 +148,9 @@
             //答案显示
             let question_answered = option_input_id.split('_')[1];
             let option_choose = option_input_id.split('_')[2];
+
+            $.ajaxSettings.async = false;
+
             $.getJSON("./example.json",function(data) {
                 let question = data.questions[question_answered];
                 let result = question.result[option_choose-1];
@@ -129,12 +160,16 @@
                     "<div class='quiz-result-title'>" + result + "</div>" +
                     "<div class='quiz-result-text'>" +  feedback + "</div>"
                 )
+
+                score = score + question.score[option_choose-1];
             })
+
+            //分数显示
+            $(".score").html(score);
         })
+
     })
 </script>
-
-
 </body>
 
 </html>
