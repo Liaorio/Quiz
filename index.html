@@ -40,7 +40,8 @@
 <script src="vendor/slick/slick.js" charset="utf-8"></script>
 <script src="vendor/jquery.lazyload.js"></script>
 <script>
-
+    $.ajaxSettings.async = false;
+    
     $.getJSON("./example.json",function(data) {
 
         var questions = data.questions;
