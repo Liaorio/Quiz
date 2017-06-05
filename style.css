@@ -90,6 +90,7 @@ body {
     line-height: 30px;
     background: #DBDBDB;
     margin: 5px 0 5px -45px;
+    cursor: pointer;
 }
 
 .quiz-question-options ul li:hover {
@@ -106,6 +107,7 @@ body {
     color: #fff;
     text-align: center;
     visibility: hidden;
+    cursor: pointer;
 }
 
 .quiz-result {

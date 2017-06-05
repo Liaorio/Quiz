@@ -140,37 +140,36 @@
         $('.quiz-question-options ul li').click(function (e) {
 
             //input选中
-            let option_input = e.target.childNodes[0] ? e.target.childNodes[0] : e.target;
-            let option_input_id = option_input.getAttribute("id");
+            var option_input = e.target.childNodes[0] ? e.target.childNodes[0] : e.target;
+            var option_input_id = option_input.getAttribute("id");
             $('#' + option_input_id).attr('checked',true);
 
             //li背景颜色改变
-            let option_li = e.target.parentNode.nodeName == 'LI' ? e.target.parentNode : e.target;
-            let option_li_id = option_li.getAttribute('id');
+            var option_li = e.target.parentNode.nodeName == 'LI' ? e.target.parentNode : e.target;
+            var option_li_id = option_li.getAttribute('id');
             $('#' + option_li_id).css('background','#B4A24E');
 
             //ul不能被点击
-            let question_id = option_input.getAttribute("name");
+            var question_id = option_input.getAttribute("name");
             $("#" + question_id).css('pointer-events','none');
             $("#" + question_id).css('color','#efefef');
 
             //答案显示
-            let question_answered = option_input_id.split('_')[1];
-            let option_choose = option_input_id.split('_')[2];
+            var question_answered = option_input_id.split('_')[1];
+            var option_choose = option_input_id.split('_')[2];
 
             $.ajaxSettings.async = false;
-
             $.getJSON("./example.json",function(data) {
-                let question = data.questions[question_answered];
-                let result = question.result[option_choose-1];
-                let feedback = question.feedback[option_choose-1];
+                var question = data.content.questions[question_answered];
+                var result = option_choose == question.rightAnswer ? 'Correct' : 'Wrong';
+                var feedback = question.explanation;
 
                 $('#result_question_' + question_answered ).append(
-                    "<div class='quiz-result-title'>" + result + "</div>" +
+                    "<div class='quiz-result-title'>" + result + "!" + "</div>" +
                     "<div class='quiz-result-text'>" +  feedback + "</div>"
                 )
 
-                score = score + question.score[option_choose-1];
+                if (result == 'Correct') {score++;}  //得分加一
             })
 
             //nextButton显示
