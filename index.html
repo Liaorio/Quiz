@@ -16,11 +16,10 @@
 
         <div class="quiz-title">
             <div class="quiz-main-title">
-                Quiz of the week's news
+
             </div>
             <div class="quiz-sub-title">
-                It's the weekly news quiz - have you been playing attention to what's has been going on in the world
-                over the past seven days?
+
             </div>
 
         </div>
@@ -40,11 +39,16 @@
 <script src="vendor/slick/slick.js" charset="utf-8"></script>
 <script src="vendor/jquery.lazyload.js"></script>
 <script>
+
     $.ajaxSettings.async = false;
-    
     $.getJSON("./example.json",function(data) {
 
-        var questions = data.questions;
+        var content = data.content;
+
+        $('.quiz-main-title').html(content.title);
+        $('.quiz-sub-title').html(content.description);
+
+        var questions = content.questions;
         var number = questions.length;
 
         $.each(questions, function(key, val) {
@@ -53,7 +57,7 @@
             $('.slick-part').append(
                 "<div class='slick-item'>" +
                     "<div class='quiz-image'>" +
-                        "<img class='lazy' data-original='./asset/t"+ key +".jpg' width='100%' height='200px'>" +
+                        "<img class='lazy' data-original='"+ val.img +"' width='100%' height='200px'>" +
                     "</div>" +
                     "<div class='quiz-question'>" +
                         "<div class='quiz-question-num-container'>" +
@@ -65,16 +69,16 @@
                         "<div class='quiz-question-options'>" +
                             "<ul id='question_" + key + "'>" +
                                 "<li id='question_"+ key +"_1_li'>" +
-                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_1_option'>" +   val.options[0] +
+                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_1_option'>" +   val.options1 +
                                 "</li>" +
                                 "<li id='question_" + key + "_2_li'>" +
-                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_2_option'>" +   val.options[1] +
+                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_2_option'>" +   val.options2 +
                                 "</li>" +
                                 "<li id='question_" + key + "_3_li'>" +
-                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_3_option'>" +   val.options[2] +
+                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_3_option'>" +   val.options3 +
                                 "</li>" +
                                 "<li id='question_" + key + "_4_li'>" +
-                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_4_option'>" +   val.options[3] +
+                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_4_option'>" +   val.options4 +
                                 "</li>" +
                             "</ul>" +
                         "</div>" +
