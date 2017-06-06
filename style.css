@@ -8,7 +8,7 @@ body {
     font-weight: normal;
 }
 
-.quiz-container-outer {
+.cmsQuiz {
     background: #EFEFEF;
     width: 400px;
     /*height: 800px;*/
@@ -29,16 +29,12 @@ body {
     font-weight: 500;
     line-height: 25px;
     border-bottom: 3px solid #B4A24E;
-    width: 215px;
+    width: 220px;
 }
 
 .quiz-sub-title {
     margin: 0 50px 0 0;
     line-height: 20px;
-}
-
-.slick-part {
-    /*visibility: hidden;*/
 }
 
 /*slick slide height eliminate*/

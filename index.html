@@ -11,27 +11,8 @@
 <body>
 
 <!-- Dependencies -->
-<div class="quiz-container-outer">
-    <div class="quiz-container-inner">
+<div class="cmsQuiz">
 
-        <div class="quiz-title">
-            <div class="quiz-main-title">
-
-            </div>
-            <div class="quiz-sub-title">
-
-            </div>
-
-        </div>
-
-        <div class="slick-part">
-
-        </div>
-
-        <div class="quiz-result">
-
-        </div>
-    </div>
 </div>
 
 
@@ -39,6 +20,10 @@
 <script src="vendor/slick/slick.js" charset="utf-8"></script>
 <script src="vendor/jquery.lazyload.js"></script>
 <script>
+
+    var outerHtmlElement = '<div class="quiz-container-inner"><div class="quiz-title"><div class="quiz-main-title"></div><div class="quiz-sub-title"></div></div><div class="slick-part"></div><div class="quiz-result"></div></div>';
+
+    $('.cmsQuiz').append(outerHtmlElement);
 
     $.ajaxSettings.async = false;
     $.getJSON("./example.json",function(data) {
@@ -51,48 +36,48 @@
         var questions = content.questions;
         var number = questions.length;
 
-        $.each(questions, function(key, val) {
-
-            //题目页面
-            $('.slick-part').append(
-                "<div class='slick-item'>" +
-                    "<div class='quiz-image'>" +
-                        "<img class='lazy' data-original='"+ val.img +"' width='100%' height='200px'>" +
-                    "</div>" +
-                    "<div class='quiz-question'>" +
-                        "<div class='quiz-question-num-container'>" +
-                            "<div class='quiz-question-num'>" + (key + 1) + "</div>" +
-                        "</div>" +
-                        "<div class='quiz-question-text'>" +
-                            val.question +
-                        "</div>" +
-                        "<div class='quiz-question-options'>" +
-                            "<ul id='question_" + key + "'>" +
-                                "<li id='question_"+ key +"_1_li'>" +
-                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_1_option'>" +   val.options1 +
-                                "</li>" +
-                                "<li id='question_" + key + "_2_li'>" +
-                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_2_option'>" +   val.options2 +
-                                "</li>" +
-                                "<li id='question_" + key + "_3_li'>" +
-                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_3_option'>" +   val.options3 +
-                                "</li>" +
-                                "<li id='question_" + key + "_4_li'>" +
-                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_4_option'>" +   val.options4 +
-                                "</li>" +
-                            "</ul>" +
-                        "</div>" +
-                    "</div>" +
-                    "<div class='nextButton' id='next_"+ key +"'>" + "Next" + "</div>" +
-                "</div>"
-            );
-
-            //题目答案页面
-            $(".quiz-result").append(
-                "<div id='result_question_" + key + "'>" + "</div>"
-            );
-
-        });
+//        $.each(questions, function(key, val) {
+//
+//            //题目页面
+//            $('.slick-part').append(
+//                "<div class='slick-item'>" +
+//                    "<div class='quiz-image'>" +
+//                        "<img class='lazy' data-original='"+ val.img +"' width='100%' height='200px'>" +
+//                    "</div>" +
+//                    "<div class='quiz-question'>" +
+//                        "<div class='quiz-question-num-container'>" +
+//                            "<div class='quiz-question-num'>" + (key + 1) + "</div>" +
+//                        "</div>" +
+//                        "<div class='quiz-question-text'>" +
+//                            val.question +
+//                        "</div>" +
+//                        "<div class='quiz-question-options'>" +
+//                            "<ul id='question_" + key + "'>" +
+//                                "<li id='question_"+ key +"_1_li'>" +
+//                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_1_option'>" +   val.options1 +
+//                                "</li>" +
+//                                "<li id='question_" + key + "_2_li'>" +
+//                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_2_option'>" +   val.options2 +
+//                                "</li>" +
+//                                "<li id='question_" + key + "_3_li'>" +
+//                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_3_option'>" +   val.options3 +
+//                                "</li>" +
+//                                "<li id='question_" + key + "_4_li'>" +
+//                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_4_option'>" +   val.options4 +
+//                                "</li>" +
+//                            "</ul>" +
+//                        "</div>" +
+//                    "</div>" +
+//                    "<div class='nextButton' id='next_"+ key +"'>" + "Next" + "</div>" +
+//                "</div>"
+//            );
+//
+//            //题目答案页面
+//            $(".quiz-result").append(
+//                "<div id='result_question_" + key + "'>" + "</div>"
+//            );
+//
+//        });
 
         //结果页面
         $('.slick-part').append(
@@ -121,21 +106,21 @@
         var score = 0;
 
         $("img.lazy").lazyload();
+//
+//        $('.slick-part').slick({
+//            dots: false,
+//            draggable: false,
+//            infinite: false,
+//            asNavFor: '.quiz-result',
+//            nextArrow: $('.nextButton'),
+//        });
 
-        $('.slick-part').slick({
-            dots: false,
-            draggable: false,
-            infinite: false,
-            asNavFor: '.quiz-result',
-            nextArrow: $('.nextButton'),
-        });
-
-        $('.quiz-result').slick({
-            asNavFor:'.slick-part',
-            infinite: false,
-            fade: true,
-            arrows: false,
-        });
+//        $('.quiz-result').slick({
+//            asNavFor:'.slick-part',
+//            infinite: false,
+//            fade: true,
+//            arrows: false,
+//        });
 
         $('.quiz-question-options ul li').click(function (e) {
 
