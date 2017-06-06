@@ -129,6 +129,8 @@ body {
 
 .score-div {
     text-align: center;
+    border-top: 1px solid #4C4C4C;
+    border-bottom: 1px solid #4C4C4C;
 }
 
 .score-part {
@@ -145,3 +147,20 @@ body {
 }
 
 
+/*.share*/
+/*width 100%*/
+/*height divide3x(150)*/
+/*padding divide3x(27) divide3x(30) divide3x(27) 0*/
+
+/*a*/
+/*display block*/
+/*float right*/
+/*width divide3x(96)*/
+/*height divide3x(96)*/
+/*margin 0 divide3x(18)*/
+
+/*img*/
+/*width 100%*/
+
+/*.tumblr*/
+/*display none*/
