@@ -131,7 +131,7 @@ body {
     text-align: center;
     border-top: 1px solid #E3E3E3;
     border-bottom: 1px solid #E3E3E3;
-    height: 400px;
+    height: 380px;
 }
 
 .score-part {
@@ -160,7 +160,7 @@ body {
     padding: 9px 10px 9px 0;
     position: relative;
     left: -50%;
-    clear: right;
+    /*clear: right;*/
 }
 
 
@@ -177,7 +177,7 @@ body {
 }
 
 .restartButton {
-    margin: 20px auto;
+    margin: 50px auto 0 auto;
     padding: 5px 10px;
     width: 50%;
     height: 40px;
