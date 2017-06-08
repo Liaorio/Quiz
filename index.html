@@ -21,94 +21,98 @@
 <script src="vendor/jquery.lazyload.js"></script>
 <script>
 
-    var outerHtmlElement = '<div class="quiz-container-inner"><div class="quiz-title"><div class="quiz-main-title"></div><div class="quiz-sub-title"></div></div><div class="slick-part"></div><div class="quiz-result"></div></div>';
-
-    $('.cmsQuiz').append(outerHtmlElement);
-
     $.ajaxSettings.async = false;
-    $.getJSON("./example.json",function(data) {
+    $.getJSON("./example.json", function (data) {
 
-        var content = data.content;
-
-        $('.quiz-main-title').html(content.title);
-        $('.quiz-sub-title').html(content.description);
-
+        var quizJson = data;
+        var content = quizJson.content;
         var questions = content.questions;
         var number = questions.length;
+        var hasImage = content.quizImageControl ? '' : 'hide';
 
-        $.each(questions, function(key, val) {
+
+        var quizHtml = '';
+
+        quizHtml = '<div class="cmsQuiz"><div class="quiz-container-inner"><div class="quiz-title"><div class="quiz-main-title">' + content.title + '</div><div class="quiz-sub-title">' + content.description + '</div></div>' + '<div class="slick-part">';
+
+        $.each(questions, function (key, val) {
+
+            var isShown1 = val.options1 == "" ? 'invisible' : '',
+                isShown2 = val.options2 == "" ? 'invisible' : '',
+                isShown3 = val.options3 == "" ? 'invisible' : '',
+                isShown4 = val.options4 == "" ? 'invisible' : '';
 
             //题目页面
-            $('.slick-part').append(
-                "<div class='slick-item'>" +
-                    "<div class='quiz-image'>" +
-                        "<img class='lazy' data-original='"+ val.img +"' width='100%' height='200px'>" +
-                    "</div>" +
-                    "<div class='quiz-question'>" +
-                        "<div class='quiz-question-num-container'>" +
-                            "<div class='quiz-question-num'>" + (key + 1) + "</div>" +
-                        "</div>" +
-                        "<div class='quiz-question-text'>" +
-                            val.question +
-                        "</div>" +
-                        "<div class='quiz-question-options'>" +
-                            "<ul id='question_" + key + "'>" +
-                                "<li id='question_"+ key +"_1_li'>" +
-                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_1_option'>" +   val.options1 +
-                                "</li>" +
-                                "<li id='question_" + key + "_2_li'>" +
-                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_2_option'>" +   val.options2 +
-                                "</li>" +
-                                "<li id='question_" + key + "_3_li'>" +
-                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_3_option'>" +   val.options3 +
-                                "</li>" +
-                                "<li id='question_" + key + "_4_li'>" +
-                                    "<input type='radio' name='question_" + key + "' id='question_" + key + "_4_option'>" +   val.options4 +
-                                "</li>" +
-                            "</ul>" +
-                        "</div>" +
-                    "</div>" +
-                    "<div class='nextButton' id='next_"+ key +"'>" + "Next" + "</div>" +
-                "</div>"
-            );
+            quizHtml += "<div class='slick-item'>" +
+                "<div class='quiz-image " + hasImage + "'>" +
+                "<img class='lazy' data-original='" + val.img + "' width='100%' height='200px'>" +
+                "</div>" +
+                "<div class='quiz-question'>" +
+                "<div class='quiz-question-num-container'>" +
+                "<div class='quiz-question-num'>" + (key + 1) + "</div>" +
+                "</div>" +
+                "<div class='quiz-question-text'>" +
+                val.question +
+                "</div>" +
+                "<div class='quiz-question-options'>" +
+                "<ul class='quiz-question-options-ul' id='question_" + key + "'>" +
 
-            //题目答案页面
-            $(".quiz-result").append(
-                "<div id='result_question_" + key + "'>" + "</div>"
-            );
+                "<li class='quiz-question-options-li " + isShown1 + "' id='question_" + key + "_1_li'>" +
+                "<input type='radio' name='question_" + key + "' id='question_" + key + "_1_option'>" + "<label class='option-text' for='question_" + key + "_1_option'>" + val.options1 + "</label>" +
+                "</li>" +
 
+                "<li class='quiz-question-options-li " + isShown2 + "' id='question_" + key + "_2_li'>" +
+                "<input type='radio' name='question_" + key + "' id='question_" + key + "_2_option'>" + "<label class='option-text' for='question_" + key + "_2_option'>" + val.options2 + "</label>" +
+                "</li>" +
+
+
+                "<li class='quiz-question-options-li " + isShown3 + "' id='question_" + key + "_3_li'>" +
+                "<input type='radio' name='question_" + key + "' id='question_" + key + "_3_option'>" + "<label class='option-text' for='question_" + key + "_3_option'>" + val.options3 + "</label>" +
+                "</li>" +
+
+                "<li class='quiz-question-options-li " + isShown4 + "' id='question_" + key + "_4_li'>" +
+                "<input type='radio' name='question_" + key + "' id='question_" + key + "_4_option'>" + "<label class='option-text' for='question_" + key + "_4_option'>" + val.options4 + "</label>" +
+                "</li>" +
+
+                "</ul>" + "</div>" +
+
+                "<div class='quiz-process'>" + (key + 1) + "/" + number + "</div>" +
+                "</div>" +
+                "<div class='nextButton onlyNext invisible' id='next_" + key + "'>" + "Next" + "</div>" +
+                "</div>";
         });
 
-        //结果页面
-        $('.slick-part').append(
-            "<div class='slick-item'>" +
-                "<div class='score-div'>" +
-                    "<h1>" + "Your Score" + "</h1>" +
-                        "<div class='score-part'>" +
-                            "<span class='score'>" + 0 + "</span>" + "&nbsp;&nbsp;/&nbsp;&nbsp;" + number +
-                        "</div>" +
-                    "<h1>" + "Let your friends and the word know" + "</h1>" +
-                    "<div class='icon-list'>" +
-                        "<div class='share'>" +
-                            "<a class='mail' href='#' target='_blank' share_title='#'><img src='./asset/mail@3x.png'/></a>" +
-                            "<a class='mail' href='#' target='_blank' share_title='#'><img src='./asset/facebook@3x.png'/></a>" +
-                            "<a class='mail' href='#' target='_blank' share_title='#'><img src='./asset/wechat@3x.png'/></a>" +
-                            "<a class='mail' href='#' target='_blank' share_title='#'><img src='./asset/weibo@3x.png'/></a>" +
-                            "<a class='mail' href='#' target='_blank' share_title='#'><img src='./asset/twitter@3x.png'/></a>" +
-                            "<a class='mail' href='#' target='_blank' share_title='#'><img src='./asset/tumblr@3x.png'/></a>" +
-                        "</div>" +
-                    "</div>" +
-                "</div>" +
-                "<div class='restartButton'>" +
-                    "Start it again" +
-                "</div>" +
-            "</div>"
-        );
+        quizHtml += "<div class='slick-item'>" +
+            "<div class='score-div'>" +
+            "<h1>" + "Your Score" + "</h1>" +
+            "<div class='score-part'>" +
+            "<span class='score' id='final-score'>" + 0 + "</span>" + "&nbsp;&nbsp;/&nbsp;&nbsp;" + "<span class='score'>" + number + "</span>" +
+            "</div>" +
+            "<h1>" + "Let your friends and the word know" + "</h1>" +
+            "<div class='icon-list'>" +
+            "<div class='share'>" +
+            "<a class='mail' href='#' target='_blank'><img src='/template/httl/m_resources/images/share_icon/mail@3x.png'></a>" +
+            "<a class='mail' href='#' target='_blank'><img src='/template/httl/m_resources/images/share_icon/facebook@3x.png'/></a>" +
+            "<a class='mail' href='#' target='_blank'><img src='/template/httl/m_resources/images/share_icon/wechat@3x.png'/></a>" +
+            "<a class='mail' href='#' target='_blank'><img src='/template/httl/m_resources/images/share_icon/weibo@3x.png'/></a>" +
+            "<a class='mail' href='#' target='_blank'><img src='/template/httl/m_resources/images/share_icon/twitter@3x.png'/></a>" +
+            "<a class='mail' href='#' target='_blank'><img src='/template/httl/m_resources/images/share_icon/tumblr@3x.png'/></a>" +
+            "</div>" +
+            "</div>" +
+            "</div>" +
+            "<div class='restartButton nextButton' data-restart='true'>" + "Start it again" + "</div>" +
+            "</div>";
 
-        $(".quiz-result").append(
-            "<div id='result_question_last'>" + "</div>"
-        );
+        quizHtml += '</div><div class="quiz-result">';
 
+
+        quizHtml += '' + '</div></div></div>';
+
+        var item = $(quizHtml);
+
+        item[0].dataset.quiz = JSON.stringify(quizJson);
+
+        $('#cmsQuiz').append(item[0].outerHTML);
 
     });
 
@@ -122,59 +126,66 @@
         $('.slick-part').slick({
             dots: false,
             draggable: false,
-            infinite: false,
-            asNavFor: '.quiz-result',
             nextArrow: $('.nextButton'),
+            adaptiveHeight: true,
         });
 
-        $('.quiz-result').slick({
-            asNavFor:'.slick-part',
-            infinite: false,
-            fade: true,
-            arrows: false,
-        });
-
-        $('.quiz-question-options ul li').click(function (e) {
+        $('input[type="radio"]').change(function (e) {
 
             //input选中
-            var option_input = e.target.childNodes[0] ? e.target.childNodes[0] : e.target;
+            var option_input = e.target;
             var option_input_id = option_input.getAttribute("id");
-            $('#' + option_input_id).attr('checked',true);
 
             //li背景颜色改变
-            var option_li = e.target.parentNode.nodeName == 'LI' ? e.target.parentNode : e.target;
+            var option_li = e.target.parentNode;
             var option_li_id = option_li.getAttribute('id');
-            $('#' + option_li_id).css('background','#B4A24E');
+            $('#' + option_li_id).addClass('option-chosen');
 
             //ul不能被点击
             var question_id = option_input.getAttribute("name");
-            $("#" + question_id).css('pointer-events','none');
-            $("#" + question_id).css('color','#efefef');
+            $("#" + question_id).addClass('no-click');
+            $("#" + question_id).css('color', '#efefef');
 
             //答案显示
             var question_answered = option_input_id.split('_')[1];
             var option_choose = option_input_id.split('_')[2];
+            var data = JSON.parse($('.cmsQuiz')[0].dataset.quiz);
+            var question = data.content.questions[question_answered];
+            var result = option_choose == question.rightAnswer ? 'Correct' : 'Wrong';
+            var feedback = question.explanation;
+            $('.quiz-result').html(
+                "<div class='quiz-result-title'>" + result + "!" + "</div>" +
+                "<div class='quiz-result-text'>" + feedback + "</div>"
+            );
 
-            $.ajaxSettings.async = false;
-            $.getJSON("./example.json",function(data) {
-                var question = data.content.questions[question_answered];
-                var result = option_choose == question.rightAnswer ? 'Correct' : 'Wrong';
-                var feedback = question.explanation;
-
-                $('#result_question_' + question_answered ).append(
-                    "<div class='quiz-result-title'>" + result + "!" + "</div>" +
-                    "<div class='quiz-result-text'>" +  feedback + "</div>"
-                )
-
-                if (result == 'Correct') {score++;}  //得分加一
-            })
+            //得分加一
+            if (result == 'Correct') {
+                score++;
+            }
 
             //nextButton显示
-            $("#next_" + question_answered).css('visibility','visible');
+            $("#next_" + question_answered).removeClass('invisible');
 
             //分数显示
-            $(".score").html(score);
-        })
+            $("#final-score").html(score);
+
+        });
+
+        //题目刷新
+        $('.nextButton').click(function (e) {
+            $('.quiz-result').html('');
+
+            if ($(e.target)[0].dataset.restart) {
+                score = 0;
+                $('input[type="radio"]').attr('checked', false);
+                $('.quiz-question-options-ul').removeClass('no-click');
+                $('.quiz-question-options-ul').css('color', '#000');
+                $('.quiz-question-options-li').removeClass('option-chosen');
+
+                $(".onlyNext").addClass('invisible');
+            }
+
+        });
 
     })
 </script>
