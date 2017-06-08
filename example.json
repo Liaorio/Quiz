@@ -3,6 +3,7 @@
   "content": {
     "title": "Quiz of the week's news",
     "description": "It's the weekly news quiz - have you been playing attention to what's has been going on in the world over the past seven days?",
+    "quizImageControl": true,
     "questions": [
       {
         "question": "The religious police arrive at a government-sponsored cultural festival in Riyadh attended by both men and women. Can you guess what happens?",

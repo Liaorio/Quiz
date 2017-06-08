@@ -5,13 +5,13 @@
 <title>Quiz Example</title>
 <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
 <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css">
-<link rel="stylesheet" type="text/css" href="./style.css">
+<link rel="stylesheet" type="text/css" href="./new_style.css">
 </head>
 
 <body>
 
 <!-- Dependencies -->
-<div class="cmsQuiz">
+<div class="Outer">
 
 </div>
 
@@ -91,12 +91,12 @@
             "<h1>" + "Let your friends and the word know" + "</h1>" +
             "<div class='icon-list'>" +
             "<div class='share'>" +
-            "<a class='mail' href='#' target='_blank'><img src='/template/httl/m_resources/images/share_icon/mail@3x.png'></a>" +
-            "<a class='mail' href='#' target='_blank'><img src='/template/httl/m_resources/images/share_icon/facebook@3x.png'/></a>" +
-            "<a class='mail' href='#' target='_blank'><img src='/template/httl/m_resources/images/share_icon/wechat@3x.png'/></a>" +
-            "<a class='mail' href='#' target='_blank'><img src='/template/httl/m_resources/images/share_icon/weibo@3x.png'/></a>" +
-            "<a class='mail' href='#' target='_blank'><img src='/template/httl/m_resources/images/share_icon/twitter@3x.png'/></a>" +
-            "<a class='mail' href='#' target='_blank'><img src='/template/httl/m_resources/images/share_icon/tumblr@3x.png'/></a>" +
+            "<a class='mail' href='#' target='_blank'><img src='./asset/mail@3x.png'></a>" +
+            "<a class='mail' href='#' target='_blank'><img src='./asset/facebook@3x.png'/></a>" +
+            "<a class='mail' href='#' target='_blank'><img src='./asset/wechat@3x.png'/></a>" +
+            "<a class='mail' href='#' target='_blank'><img src='./asset/weibo@3x.png'/></a>" +
+            "<a class='mail' href='#' target='_blank'><img src='./asset/twitter@3x.png'/></a>" +
+            "<a class='mail' href='#' target='_blank'><img src='./asset/tumblr@3x.png'/></a>" +
             "</div>" +
             "</div>" +
             "</div>" +
@@ -112,7 +112,7 @@
 
         item[0].dataset.quiz = JSON.stringify(quizJson);
 
-        $('#cmsQuiz').append(item[0].outerHTML);
+        $('.Outer').append(item[0].outerHTML);
 
     });
 
