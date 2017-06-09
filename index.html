@@ -16,7 +16,7 @@
 </div>
 
 
-<script src="vendor/jquery-3.2.1.min.js"></script>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="vendor/slick/slick.js" charset="utf-8"></script>
 <script src="vendor/jquery.lazyload.js"></script>
 <script>
@@ -58,20 +58,20 @@
                 "<ul class='quiz-question-options-ul' id='question_" + key + "'>" +
 
                 "<li class='quiz-question-options-li " + isShown1 + "' id='question_" + key + "_1_li'>" +
-                "<input type='radio' name='question_" + key + "' id='question_" + key + "_1_option'>" + "<label class='option-text' for='question_" + key + "_1_option'>" + val.options1 + "</label>" +
+                    "<input type='radio' class='magic-radio' name='question_" + key + "' id='question_" + key + "_1_option'>" + "<label class='option-text' for='question_" + key + "_1_option'>" + val.options1 + "</label>" +
                 "</li>" +
 
                 "<li class='quiz-question-options-li " + isShown2 + "' id='question_" + key + "_2_li'>" +
-                "<input type='radio' name='question_" + key + "' id='question_" + key + "_2_option'>" + "<label class='option-text' for='question_" + key + "_2_option'>" + val.options2 + "</label>" +
+                    "<input type='radio' class='magic-radio' name='question_" + key + "' id='question_" + key + "_2_option'>" + "<label class='option-text' for='question_" + key + "_2_option'>" + val.options2 + "</label>" +
                 "</li>" +
 
 
                 "<li class='quiz-question-options-li " + isShown3 + "' id='question_" + key + "_3_li'>" +
-                "<input type='radio' name='question_" + key + "' id='question_" + key + "_3_option'>" + "<label class='option-text' for='question_" + key + "_3_option'>" + val.options3 + "</label>" +
+                    "<input type='radio' class='magic-radio' name='question_" + key + "' id='question_" + key + "_3_option'>" + "<label class='option-text' for='question_" + key + "_3_option'>" + val.options3 + "</label>" +
                 "</li>" +
 
                 "<li class='quiz-question-options-li " + isShown4 + "' id='question_" + key + "_4_li'>" +
-                "<input type='radio' name='question_" + key + "' id='question_" + key + "_4_option'>" + "<label class='option-text' for='question_" + key + "_4_option'>" + val.options4 + "</label>" +
+                    "<input type='radio' class='magic-radio' name='question_" + key + "' id='question_" + key + "_4_option'>" + "<label class='option-text' for='question_" + key + "_4_option'>" + val.options4 + "</label>" +
                 "</li>" +
 
                 "</ul>" + "</div>" +
@@ -144,7 +144,6 @@
             //ul不能被点击
             var question_id = option_input.getAttribute("name");
             $("#" + question_id).addClass('no-click');
-            $("#" + question_id).css('color', '#efefef');
 
             //答案显示
             var question_answered = option_input_id.split('_')[1];
@@ -179,9 +178,7 @@
                 score = 0;
                 $('input[type="radio"]').attr('checked', false);
                 $('.quiz-question-options-ul').removeClass('no-click');
-                $('.quiz-question-options-ul').css('color', '#000');
                 $('.quiz-question-options-li').removeClass('option-chosen');
-
                 $(".onlyNext").addClass('invisible');
             }
 

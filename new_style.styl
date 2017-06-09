@@ -1,15 +1,16 @@
 .cmsQuiz
   background #EFEFEF
-  width 100%
+  width 50%
   margin 0 auto
   font-size 15px
-  outline none !important
+  outline none
 
   .hide
-    display none !important
+    display none
 
   .invisible
     visibility hidden
+
 
   .quiz-container-inner
     padding 10px 0
@@ -25,9 +26,11 @@
         border-bottom 3px solid #BFAE62
         display inline-flex
 
+
       .quiz-sub-title
         margin 0 50px 0 0
         line-height 20px
+
 
     .slick-part
 
@@ -64,8 +67,10 @@
           .no-click
             pointer-events none
 
+
           .quiz-question-options
             margin-top 20px
+
 
             ul
               list-style none
@@ -77,14 +82,57 @@
                 line-height 30px
                 background #DBDBDB
                 margin 5px 0
+                min-height 30px
 
-                input[type="radio"]
-                  margin 8px 5px 0 5px
-                  float left
+                .magic-radio 
+                  position absolute
+                  display none
+                
 
-                .option-text
-                  padding-left 22px
-                  display block !important
+                .magic-radio + label 
+                  position relative
+                  display block
+                  cursor pointer
+                  vertical-align middle
+                  padding-left 30px
+                
+
+                .magic-radio + label:before 
+                  position absolute
+                  top 7
+                  left 7
+                  display inline-block
+                  width 14px
+                  height 14px
+                  content ''
+                  border 1px solid #000
+                  margin-right 10px
+                  border-radius 50%
+                
+
+                .magic-radio + label:after 
+                  position absolute
+                  display none
+                  content ''
+                  top 10px
+                  left 10px
+                  width 10px
+                  height 10px
+                  border-radius 50%
+                  background #000
+                
+
+                .magic-radio:checked + label 
+                  color #fff
+                
+
+                .magic-radio:checked + label:after 
+                  display block
+                
+
+                .magic-radio:checked + label:before 
+                  border 1px solid #000
+                
 
                 &:hover
                   background #BFAE62
@@ -92,6 +140,7 @@
           .quiz-process
             float left
             margin-top 10px
+
 
         .nextButton
           margin-right 20px
@@ -110,6 +159,7 @@
         border-bottom 1px solid #E3E3E3
         height 430px
 
+
         h1
           font-size 20px
           margin-top 20px
@@ -125,10 +175,12 @@
           .score
             font-size 50px
 
+
         .icon-list
           position relative
           float left
           left 50%
+
 
           .share
             margin-top 40px
@@ -145,16 +197,19 @@
               height 32px
               margin 0 6px
 
+
               img
                 width 100%
 
+
       .restartButton
-        margin 50px auto 0 auto !important
-        float none !important
-        width 50% !important
+        margin 50px auto 0 auto!important
+        float none!important
+        width 50%!important
+
 
     .quiz-result
-      padding 0 20px 30px 20px
+      padding  0 20px 30px 20px
 
       .quiz-result-title
         margin 10px 0
@@ -162,10 +217,9 @@
         font-size 24px
         font-weight 500
 
+
       .quiz-result-text
         color #4C4C4C
         font-weight 200
-
-
 
 
