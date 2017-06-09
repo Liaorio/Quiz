@@ -1,103 +1,40 @@
 {
-  "questions": [
-
-    {
-      "result" : ["Wrong!","Correct!","Wrong!","Wrong"],
-      "feedback": [
-        "A member of the religious police tried to break up the festival but he was stopped by the National Guard and removed from the scene. Men and women are usually allowed to mix during an annual government-sponsored festival, as long as they comply with the conservative dress code.",
-        "That's what happened. But the officer was stopped by the National Guard and removed from the scene. Men and women are usually allowed to mix during an annual government-sponsored festival, as long as they comply with the conservative dress code.",
-        "A member of the religious police tried to break up the festival but he was stopped by the National Guard and removed from the scene. Men and women are usually allowed to mix during an annual government-sponsored festival, as long as they comply with the conservative dress code.",
-        "A member of the religious police tried to break up the festival but he was stopped by the National Guard and removed from the scene. Men and women are usually allowed to mix during an annual government-sponsored festival, as long as they comply with the conservative dress code."
-      ],
-      "score": [0, 1, 0, 0],
-      "options": [
-        "The religious police try to separate the men from the women",
-        "A member of the religious police tries to break up the festival",
-        "A member of the religious police tells the women to go home",
-        "They police join the party"
-      ],
-      "question": "The religious police arrive at a government-sponsored cultural festival in Riyadh attended by both men and women. Can you guess what happens?",
-      "questionImg": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q1_d8iud.PNG"
-    },
-
-
-    {
-      "result" : ["Wrong!","Wrong!","Correct","Wrong!"],
-      "feedback": [
-        "The legal boundaries in this case are blurred. But shopkeepers usually do comply as the religious police is a state institution which reports to the authorities. Police also have jurisdiction over public spaces.",
-        "The legal boundaries in this case are blurred. But shopkeepers usually do comply as the religious police is a state institution which reports to the authorities. Police also have jurisdiction over public spaces.",
-        "Even though the legal boundaries in this matter are blurred, shopkeepers usually comply as the religious police is a state institution which reports to the authorities. They also have jurisdiction over public spaces.",
-        "The legal boundaries in this case are blurred. But shopkeepers usually do comply as the religious police is a state institution which reports to the authorities. Police also have jurisdiction over public spaces."
-      ],
-      "score": [0, 0, 1, 0],
-      "options": [
-        "He serves her - the religious police can’t stop him",
-        "He asks the religious police to leave the shop",
-        "He doesn't serve the woman",
-        "He asks the religious police to serve her instead"
-      ],
-      "question": "Members of the religious police ask a salesperson in a shop not to serve a woman because she is deemed to be dressed inappropriately. Can you guess what happens?",
-      "questionImg": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q2_25ytt.PNG"
-    },
-
-
-    {
-      "result" : ["Wrong!","Wrong!","Correct","Wrong!"],
-      "feedback": [
-        "The woman confronts the member of the religious police and films the whole incident. The religious police don't have blanket powers to arrest anyone, and to carry out an arrest they would usually be accompanied by ordinary police.",
-        "The woman confronts the member of the religious police and films the whole incident. The religious police don't have blanket powers to arrest anyone, and to carry out an arrest they would usually be accompanied by ordinary police.",
-        "The religious police don't have blanket arrest powers. Usually they are accompanied by ordinary police when making arrests, and their authority has been further reduced since 2013, when they were stripped of their ability to interrogate or charge people.",
-        "The woman confronts the member of the religious police and films the whole incident. The religious police don't have blanket powers to arrest anyone, and to carry out an arrest they would usually be accompanied by ordinary police."
-      ],
-      "score": [0, 0, 1, 0],
-      "options": [
-        "She agrees to leave the centre after they threaten to arrest her",
-        "The religious police arrest her",
-        "The woman confronts the police and refuses to leave the centre",
-        "The woman offers to remove the nail polish"
-      ],
-      "question": "A member of the religious police asks a woman to leave a shopping centre because she&rsquo;s wearing nail polish. Can you guess what happens next?",
-      "questionImg": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q3_7wki2.PNG"
-    },
-
-
-    {
-      "result" : ["Wrong!","Correct","Wrong!","Wrong!"],
-      "feedback": [
-        "The religious police believe that music, as well as the mixing of men and women, is unlawful. But they have been prohibited from conducting car chases since a Saudi was killed and his wife and children injured after a pursuit.",
-        "The religious police believe that music, as well as the mixing of men and women, is unlawful. But they have been prohibited from conducting car chases since a Saudi was killed and his wife and children injured after a pursuit.",
-        "They ask everyone to go back to their cars. The religious police believe that music, as well as the mixing of men and women, is unlawful.",
-        "The religious police believe that music, as well as the mixing of men and women, is unlawful. They ask people to go back to their cars."
-      ],
-      "score": [0, 1, 0, 0],
-      "options": [
-        "The party rush to their cars and are chased by the religious police",
-        "The religious police ask the people to go back to their cars",
-        "The religous police leave the men alone but order the women to go back to their cars",
-        "The police ask to join the party"
-      ],
-      "question": "<p>The religious police arrive at the wedding party of an Egyptian couple celebrating in the street. Can you guess what happens next?</p>",
-      "questionImg": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q4_tjwri.PNG"
-    },
-
-    {
-      "result" : ["Correct","Wrong!","Wrong!","Wrong!"],
-      "feedback": [
-        "The religious police do not approve of the mixing of men and women who are not related, even when it happens in public.The celebrity involved in this case did not reveal details of the interrogation or what happened in the mall control room.",
-        "They grabbed him and took him to the centre control room for interrogation. The religious police do not approve of the mixing of men and women who are not related, even in public.",
-        "They grabbed him and took him to the centre control room for interrogation. The religious police do not approve of the mixing of men and women who are not related, even when it happens in public.",
-        "They grabbed him and took him to the shopping centre control room for interrogation. The religious police do not approve of the mixing of men and women who are not related, even when it happens in public."
-      ],
-      "score": [1, 0, 0, 0],
-      "options": [
-        "The religious police grab him and take him to the centre control room for interrogation",
-        "They run to take selfies with him",
-        "The religious police ask for his autograph",
-        "The police beat him up"
-      ],
-      "question": "<p>A Kuwaiti actor arrives at a shopping centre in Riyadh and a large group of female fans gather around him. Can you guess what happens next?</p>",
-      "questionImg": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q5_mhnmg.PNG"
-    }
-
-  ]
+  "contentType": 12,
+  "content": {
+    "title": "Quiz of the week's news",
+    "description": "It's the weekly news quiz - have you been playing attention to what's has been going on in the world over the past seven days?",
+    "quizImageControl": true,
+    "questions": [
+      {
+        "question": "The religious police arrive at a government-sponsored cultural festival in Riyadh attended by both men and women. Can you guess what happens?",
+        "img": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q1_d8iud.PNG",
+        "rightAnswer": "2",
+        "explanation": "A member of the religious police tried to break up the festival but he was stopped by the National Guard and removed from the scene. Men and women are usually allowed to mix during an annual government-sponsored festival, as long as they comply with the conservative dress code.",
+        "options1": "The religious police try to separate the men from the women",
+        "options2": "A member of the religious police tries to break up the festival",
+        "options3": "A member of the religious police tells the women to go home",
+        "options4": "They police join the party"
+      },
+      {
+        "question": "Members of the religious police ask a salesperson in a shop not to serve a woman because she is deemed to be dressed inappropriately. Can you guess what happens?",
+        "img": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q2_25ytt.PNG",
+        "rightAnswer": "3",
+        "explanation": "The legal boundaries in this case are blurred. But shopkeepers usually do comply as the religious police is a state institution which reports to the authorities. Police also have jurisdiction over public spaces.",
+        "options1": "He serves her - the religious police can’t stop him",
+        "options2": "He asks the religious police to leave the shop",
+        "options3": "He doesn't serve the woman",
+        "options4": "He asks the religious police to serve her instead"
+      },
+      {
+        "question": "The religious police arrive at the wedding party of an Egyptian couple celebrating in the street. Can you guess what happens next?",
+        "img": "http://news.files.bbci.co.uk/vj/live/idt-images/quizzes-What_would_the_Saudi_religious_police_do/q4_tjwri.PNG",
+        "rightAnswer": "2",
+        "explanation": "The religious police believe that music, as well as the mixing of men and women, is unlawful. But they have been prohibited from conducting car chases since a Saudi was killed and his wife and children injured after a pursuit.",
+        "options1": "The party rush to their cars and are chased by the religious police",
+        "options2": "The religious police ask the people to go back to their cars",
+        "options3": "The religous police leave the men alone but order the women to go back to their cars",
+        "options4": "The police ask to join the party"
+      }
+    ]
+  }
 }
