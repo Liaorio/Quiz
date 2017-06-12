@@ -9,3 +9,7 @@ out
 gen
 
 .idea/workspace.xml
+node_modules/
+package.json
+vendor/slick/slick.min.js
+/node_modules/

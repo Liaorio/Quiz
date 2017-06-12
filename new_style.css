@@ -1,9 +1,10 @@
+* {
+  outline: none;
+}
 .cmsQuiz {
   background: #efefef;
-  width: 50%;
   margin: 0 auto;
   font-size: 15px;
-  outline: none;
 }
 .cmsQuiz .hide {
   display: none;
@@ -195,5 +196,5 @@
 }
 .cmsQuiz .quiz-container-inner .quiz-result .quiz-result-text {
   color: #4c4c4c;
-  font-weight: 200;
+  font-weight: 300;
 }
