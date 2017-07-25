@@ -29,7 +29,7 @@
 
                 quizHtml += "<div class='slick-item' id='slick-item-" + key + "'>" +
                     "<div class='quiz-image " + hasImage + "'>" +
-                    "<img class='lazy' data-original='" + val.img + "' width='100%' height='200px'>" +
+                    "<img src='" + val.img + "'>" +
                     "</div>" +
                     "<div class='quiz-question' id='slick-item-question-" + key + " '>" +
                     "<div class='quiz-question-num-container'>" +
@@ -90,9 +90,6 @@
         addQuizFunction: function () {
             this.htmlElementJoint();
 
-            //Lazyload
-            $("img.lazy").lazyload();
-
             //Slick
             $('.slick-part').slick({
                 dots: false,
@@ -100,19 +97,6 @@
                 draggable: false,
                 nextArrow: $('.nextButton'),
             });
-
-            var slick_items = document.getElementsByClassName('slick-item');
-
-            for (var i = 0; i < slick_items.length; i++) {
-
-                (function (lockedInIndex) {
-
-                    var element_id = 'slick-item-' + lockedInIndex;
-                    console.log($('#' + element_id).height());
-                   
-                })(i);
-
-            }
 
             //Do Quiz
             var score = 0;

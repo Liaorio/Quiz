@@ -5,6 +5,7 @@
   background: #efefef;
   margin: 0 auto;
   font-size: 15px;
+  width: 50%;
 }
 .cmsQuiz .hide {
   display: none;
@@ -31,8 +32,8 @@
   line-height: 20px;
 }
 .cmsQuiz .quiz-container-inner .slick-part .slick-item .quiz-image img {
-  width: 50%;
   margin: 0 auto;
+  width: 100%;
 }
 .cmsQuiz .quiz-container-inner .slick-part .slick-item .quiz-question {
   margin: 20px;
