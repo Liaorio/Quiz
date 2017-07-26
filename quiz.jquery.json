@@ -1,0 +1,37 @@
+{
+    "name": "quiz",
+    "title": "CGTN Quiz",
+    "description": "Build a Quiz and share result to others",
+    "keywords": [
+        "quiz",
+        "CGTN",
+        "share"
+    ],
+    "version": "1.0",
+    "author": {
+        "name": "LiAo",
+        "email": "liaorio@gmail.com",
+        "url": "https://github.com/Liaorio/Quiz"
+    },
+    "maintainers": [
+        {
+           "name": "LiAo",
+            "email": "liaorio@gmail.com",
+            "url": "https://github.com/Liaorio/Quiz"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/jquery/jquery-color/blob/2.1.2/MIT-LICENSE.txt"
+        }
+    ],
+    "bugs": "https://github.com/Liaorio/Quiz/issues",
+    "homepage": "https://github.com/Liaorio/Quiz",
+    "docs": "http://github.com/Liaorio/Quiz/",
+    "demo":"http://github.com/Liaorio/Quiz/",
+    "download": "http://github.com/Liaorio/Quiz/master",
+    "dependencies": {
+        "jquery": ">=1.11"
+    }
+}

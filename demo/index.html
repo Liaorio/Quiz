@@ -3,19 +3,16 @@
 <meta charset="utf-8"></meta>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quiz Example</title>
-<link rel="stylesheet" type="text/css" href="./new_style.css">
+<link rel="stylesheet" type="text/css" href="./css/quiz-style.css">
 </head>
 
 <body>
 
     <!-- Quiz Container -->
-    <div class="container">
+    <div class="container"></div>
 
-    </div>
-
-
-    <script src="vendor/jquery.min.js"></script>
-    <script src="create_quiz.js"></script>
+    <script src="./vendor/jquery.min.js"></script>
+    <script src="./js/jquery.quiz.min.js"></script>
     <script>
         $(function () {
             
@@ -59,7 +56,8 @@
                     ]
                 }
             }
-
+            
+            //调用方法
             $('.container').createQuiz(quizJson);
 
         })
