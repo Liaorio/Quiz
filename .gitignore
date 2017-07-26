@@ -13,3 +13,5 @@ node_modules/
 package.json
 vendor/slick/slick.min.js
 /node_modules/
+/dist/
+/new_style.styl
