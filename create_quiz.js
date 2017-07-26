@@ -110,14 +110,6 @@
         addQuizFunction: function () {
             this.htmlElementJoint();
 
-            //Slick
-            // $('.slick-part').slick({
-            //     dots: false,
-            //     adaptiveHeight: true,
-            //     draggable: false,
-            //     nextArrow: $('.nextButton'),
-            // });
-
             //Do Quiz
             var score = 0;
 
