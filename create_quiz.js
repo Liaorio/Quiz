@@ -17,21 +17,29 @@
             var questions = content.questions;
             var number = questions.length;
             var hasImage = content.quizImageControl ? '' : 'hide';
+
+
             var quizHtml = '';
 
             quizHtml = '<div class="cmsQuiz"><div class="quiz-container-inner"><div class="quiz-title"><div class="quiz-main-title">' + content.title + '</div><div class="quiz-sub-title">' + content.description + '</div></div>' + '<div class="slick-part">';
 
             $.each(questions, function (key, val) {
+
                 var isShown1 = val.options1 == "" ? 'invisible' : '',
                     isShown2 = val.options2 == "" ? 'invisible' : '',
                     isShown3 = val.options3 == "" ? 'invisible' : '',
                     isShown4 = val.options4 == "" ? 'invisible' : '';
 
-                quizHtml += "<div class='slick-item' id='slick-item-" + key + "'>" +
+                var noImgClass = '';
+                if(!val.img) {
+                    noImgClass = 'js-noimg';
+                }
+                //题目页面
+                quizHtml += "<div class='slick-item'>" +
                     "<div class='quiz-image " + hasImage + "'>" +
-                    "<img src='" + val.img + "'>" +
+                    "<img class='"+ noImgClass +"' src='" + val.img + "' />" +
                     "</div>" +
-                    "<div class='quiz-question' id='slick-item-question-" + key + " '>" +
+                    "<div class='quiz-question'>" +
                     "<div class='quiz-question-num-container'>" +
                     "<div class='quiz-question-num'>" + (key + 1) + "</div>" +
                     "</div>" +
@@ -40,22 +48,29 @@
                     "</div>" +
                     "<div class='quiz-question-options'>" +
                     "<ul class='quiz-question-options-ul' id='question_" + key + "'>" +
+
                     "<li class='quiz-question-options-li " + isShown1 + "' id='question_" + key + "_1_li'>" +
                     "<input type='radio' class='magic-radio' name='question_" + key + "' id='question_" + key + "_1_option'>" + "<label class='option-text' for='question_" + key + "_1_option'>" + val.options1 + "</label>" +
                     "</li>" +
+
                     "<li class='quiz-question-options-li " + isShown2 + "' id='question_" + key + "_2_li'>" +
                     "<input type='radio' class='magic-radio' name='question_" + key + "' id='question_" + key + "_2_option'>" + "<label class='option-text' for='question_" + key + "_2_option'>" + val.options2 + "</label>" +
                     "</li>" +
+
+
                     "<li class='quiz-question-options-li " + isShown3 + "' id='question_" + key + "_3_li'>" +
                     "<input type='radio' class='magic-radio' name='question_" + key + "' id='question_" + key + "_3_option'>" + "<label class='option-text' for='question_" + key + "_3_option'>" + val.options3 + "</label>" +
                     "</li>" +
+
                     "<li class='quiz-question-options-li " + isShown4 + "' id='question_" + key + "_4_li'>" +
                     "<input type='radio' class='magic-radio' name='question_" + key + "' id='question_" + key + "_4_option'>" + "<label class='option-text' for='question_" + key + "_4_option'>" + val.options4 + "</label>" +
                     "</li>" +
+
                     "</ul>" + "</div>" +
+
                     "<div class='quiz-process'>" + (key + 1) + "/" + number + "</div>" +
-                    "</div>" +
                     "<div class='nextButton onlyNext invisible' id='next_" + key + "'>" + "Next" + "</div>" +
+                    "</div>" +
                     "</div>";
             });
 
@@ -68,22 +83,27 @@
                 "<h1>" + "Let your friends and the word know" + "</h1>" +
                 "<div class='icon-list'>" +
                 "<div class='share'>" +
-                "<a class='mail' href='#' target='_blank'><img src='./asset/mail@3x.png'></a>" +
-                "<a class='mail' href='#' target='_blank'><img src='./asset/facebook@3x.png'/></a>" +
-                "<a class='mail' href='#' target='_blank'><img src='./asset/wechat@3x.png'/></a>" +
-                "<a class='mail' href='#' target='_blank'><img src='./asset/weibo@3x.png'/></a>" +
+                "<a class='mail' href='#' target='_blank'><img src='./asset/facebook@3x.png'></a>" +
                 "<a class='mail' href='#' target='_blank'><img src='./asset/twitter@3x.png'/></a>" +
                 "<a class='mail' href='#' target='_blank'><img src='./asset/tumblr@3x.png'/></a>" +
+                "<a class='mail' href='#' target='_blank'><img src='./asset/wechat@3x.png'/></a>" +
+                "<a class='mail' href='#' target='_blank'><img src='./asset/weibo@3x.png'/></a>" +
+                "<a class='mail' href='#' target='_blank'><img src='./asset/mail@3x.png'/></a>" +
                 "</div>" +
                 "</div>" +
                 "</div>" +
                 "<div class='restartButton nextButton' data-restart='true'>" + "Start it again" + "</div>" +
                 "</div>";
 
-            quizHtml += '</div><div class="quiz-result"></div></div></div>';
+            quizHtml += '</div><div class="quiz-result">';
+
+
+            quizHtml += '' + '</div></div></div>';
 
             var item = $(quizHtml);
+
             item[0].dataset.quiz = JSON.stringify(quizJson);
+
             return this.$element.append(item[0].outerHTML);
         },
 
@@ -91,15 +111,16 @@
             this.htmlElementJoint();
 
             //Slick
-            $('.slick-part').slick({
-                dots: false,
-                adaptiveHeight: true,
-                draggable: false,
-                nextArrow: $('.nextButton'),
-            });
+            // $('.slick-part').slick({
+            //     dots: false,
+            //     adaptiveHeight: true,
+            //     draggable: false,
+            //     nextArrow: $('.nextButton'),
+            // });
 
             //Do Quiz
             var score = 0;
+
             $('input[type="radio"]').change(function (e) {
 
                 //input选中
@@ -121,11 +142,12 @@
                 var data = JSON.parse($('.cmsQuiz')[0].dataset.quiz);
                 var question = data.content.questions[question_answered];
                 var result = option_choose == question.rightAnswer ? 'Correct' : 'Wrong';
+                var resultclass = option_choose == question.rightAnswer ? 'js-correct' : 'js-wrong';
                 var feedback = question.explanation;
                 $('.quiz-result').html(
-                    "<div class='quiz-result-title'>" + result + "!" + "</div>" +
+                    "<div class='quiz-result-title "+ resultclass +"'>" + result + "!" + "</div>" +
                     "<div class='quiz-result-text'>" + feedback + "</div>"
-                );
+                ).fadeIn(200);
 
                 //得分加一
                 if (result == 'Correct') {
@@ -140,17 +162,35 @@
 
             });
 
+            //切换效果
+            var quizItem = $('.quiz-container-inner .slick-part .slick-item');
+            var quizLength = quizItem.length;
+            quizItem.eq(0).fadeIn(200);
+            quizItem.each(function(i) {
+                var theWrap = $(this);
+                $(this).find('.nextButton').click(function() {
+                    theWrap.hide();
+                    if(i==(quizLength-1)) {
+                        quizItem.eq(0).fadeIn(200);
+                    } else {
+                        quizItem.eq(i+1).fadeIn(200);
+                    }
+                })
+            })
+
             //题目刷新
             $('.nextButton').click(function (e) {
-                $('.quiz-result').html('');
+                $('.quiz-result').html('').hide();
 
                 if ($(e.target)[0].dataset.restart) {
                     score = 0;
                     $('input[type="radio"]').attr('checked', false);
                     $('.quiz-question-options-ul').removeClass('no-click');
                     $('.quiz-question-options-li').removeClass('option-chosen');
+
                     $(".onlyNext").addClass('invisible');
                 }
+
             });
         }
     }
